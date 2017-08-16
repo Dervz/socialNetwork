@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="main">
+		<h2>Members list</h2>
+		{% for member in members_list %}
+			<a href="{% if member.profile %}{{ member.profile }}{% else %}#{% endif %}">{{ member.username }}</a><br>
+		{% endfor %}
+	</div>
+{% endblock content %}

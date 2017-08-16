@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="main">
+		<form action="." method="GET">
+			<input name="search" placeholder="Search by username">
+		</form>
+		<br>
+		{% for message in messages_list %}
+			<p>{{message.text }}</p>
+		{% endfor %}
+	</div>
+{% endblock %}
